@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/a2"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/id_tv_cityName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="7"
+            android:background="@drawable/btn_bg_skip3"
+            android:gravity="center"
+            android:hint="请输入城市名：(北京)"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/id_tv_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="3"
+            android:background="@drawable/btn_bg_skip2"
+            android:gravity="center"
+            android:text="查找"
+            android:textColor="#9876a2"
+            android:textSize="24sp" />
+    </LinearLayout>
+</LinearLayout>

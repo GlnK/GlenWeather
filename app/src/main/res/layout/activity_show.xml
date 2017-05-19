@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/a2"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/id_tv_show_cityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="上海"
+        android:textColor="#ffffff"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/id_tv_show_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="昼夜温差很大，已发生感冒，请注意适当增减衣物"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/id_tv_show_presentTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="3℃"
+        android:textColor="#ffffff"
+        android:textSize="60sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="明天"
+            android:textColor="#555555"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/iv_1day_icon"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/a1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_1day_low"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="3℃"
+                android:textColor="#555555"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="---"
+                android:textColor="#555555"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/tv_1day_high"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="33℃"
+                android:textColor="#555555"
+                android:textSize="28sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="后天"
+            android:textColor="#555555"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/iv_2day_icon"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/a1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_2day_low"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="3℃"
+                android:textColor="#555555"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="---"
+                android:textColor="#555555"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/tv_2day_high"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="33℃"
+                android:textColor="#555555"
+                android:textSize="28sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="大后天"
+            android:textColor="#555555"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/iv_3day_icon"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/a1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_3day_low"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="3℃"
+                android:textColor="#555555"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="---"
+                android:textColor="#555555"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/tv_3day_high"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="33℃"
+                android:textColor="#555555"
+                android:textSize="28sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|top"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/a1" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/id_btn_skip"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_bg_skip"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:text="跳过"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+</FrameLayout>

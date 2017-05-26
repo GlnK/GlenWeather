@@ -31,9 +31,15 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 str_cityName = tv_cityName.getText().toString();
-                Log.e("TAGbbb", ""+str_cityName );
+                String aa = str_cityName;
+                for (int i = 0; i < 100; i++) {
+                    if (aa.substring(aa.length() - 1, aa.length()).equals(" ")) {
+                        aa = aa.substring(0, aa.length() - 1);
+                    }
+                }
+                Log.e("TAGbbb", "" + aa);
                 Intent intent = new Intent(LoginActivity.this, ShowActivity.class);
-                intent.putExtra("cityName", str_cityName);
+                intent.putExtra("cityName", aa);
                 startActivity(intent);
                 finish();
             }
@@ -45,4 +51,5 @@ public class LoginActivity extends AppCompatActivity {
         tv_search = (TextView) findViewById(R.id.id_tv_search);
     }
 }
+
 

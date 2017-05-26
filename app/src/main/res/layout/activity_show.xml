@@ -12,7 +12,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
         android:gravity="center"
-        android:text="上海"
+        android:text="城市"
         android:textColor="#ffffff"
         android:textSize="28sp" />
 
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:text="昼夜温差很大，已发生感冒，请注意适当增减衣物"
+        android:text="朝霞不出门，晚霞行千里。雷公先唱歌，有雨也不多。"
         android:textColor="#FFFFFF" />
 
     <TextView
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:text="3℃"
+        android:text="Waiting"
         android:textColor="#ffffff"
         android:textSize="60sp" />
     <LinearLayout
@@ -68,7 +68,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:text="3℃"
+                android:text="..."
                 android:textColor="#555555"
                 android:textSize="28sp" />
 
@@ -87,7 +87,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:text="33℃"
+                android:text="..."
                 android:textColor="#555555"
                 android:textSize="28sp" />
         </LinearLayout>
@@ -128,7 +128,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:text="3℃"
+                android:text="..."
                 android:textColor="#555555"
                 android:textSize="28sp" />
 
@@ -147,7 +147,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:text="33℃"
+                android:text="..."
                 android:textColor="#555555"
                 android:textSize="28sp" />
         </LinearLayout>
@@ -188,7 +188,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:text="3℃"
+                android:text="..."
                 android:textColor="#555555"
                 android:textSize="28sp" />
 
@@ -207,7 +207,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:text="33℃"
+                android:text="..."
                 android:textColor="#555555"
                 android:textSize="28sp" />
         </LinearLayout>

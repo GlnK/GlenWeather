@@ -1,6 +1,8 @@
 package com.imooc.glenweather;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -15,14 +17,23 @@ public class LoginActivity extends AppCompatActivity {
     private TextView tv_search;
     private EditText tv_cityName;
     private String str_cityName;
+    private String cityNameLast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         initView();
-
         initEvent();
+       // setSP();
+
+    }
+
+    private void setSP() {
+        SharedPreferences sharedPreferences = getSharedPreferences("test", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("dengluchengshi", cityNameLast);
+        editor.commit();
     }
 
     private void initEvent() {
@@ -40,6 +51,7 @@ public class LoginActivity extends AppCompatActivity {
                 Log.e("TAGbbb", "" + aa);
                 Intent intent = new Intent(LoginActivity.this, ShowActivity.class);
                 intent.putExtra("cityName", aa);
+                cityNameLast = aa;
                 startActivity(intent);
                 finish();
             }

@@ -34,4 +34,5 @@ public class Config {
         String url = nowstr1 + cityName + str2;
         return url;
     }
+
 }

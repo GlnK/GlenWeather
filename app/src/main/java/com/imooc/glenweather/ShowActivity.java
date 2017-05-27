@@ -121,7 +121,8 @@ public class ShowActivity extends AppCompatActivity {
 //            aak[i] = "aaValue   " + Integer.toString(i);
 //            editor.putString(aa[i], aak[i]);
 //        }
-        editor.putString("0", cityName);
+        editor.putString("dengluchengshi", cityName);
+        editor.putInt("denglucishu", 4);
         for (int i = 0; i < aa.size(); i++) {
             editor.putString(Integer.toString(i + 1), aa.get(i));
         }
@@ -171,6 +172,7 @@ public class ShowActivity extends AppCompatActivity {
         }
         URL3Day = Config.getInstance().get3dayUrl(cityName);
     }
+
 
     private void initView() {
         tv_cityName = (TextView) findViewById(R.id.id_tv_show_cityName);

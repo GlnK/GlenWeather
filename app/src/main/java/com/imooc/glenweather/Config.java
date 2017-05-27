@@ -10,7 +10,7 @@ public class Config {
     private String threeDaystr1 = "https://free-api.heweather.com/v5/weather?city=";
     private String nowstr1 = "https://api.heweather.com/v5/now?city=";
     private String str2 = "&key=791075f8456044679f0b6169655b21be";
-
+//https://free-api.heweather.com/v5/weather?city=beijing&key=791075f8456044679f0b6169655b21be
     private static Config instance = null;
 
     public static synchronized Config getInstance() {

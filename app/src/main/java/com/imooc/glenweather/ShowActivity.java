@@ -27,7 +27,7 @@ import java.util.List;
 public class ShowActivity extends AppCompatActivity {
     String cityName;
     String URL3Day;
-    private TextView tv_cityName, tv_tip, tv_presentTemp, tv_h1, tv_h2, tv_h3, tv_l1, tv_l2, tv_l3;
+    private TextView tv_cityName, tv_tip, tv_presentTemp, tv_h1, tv_h2, tv_h3, tv_l1, tv_l2, tv_l3, tv_date_today, tv_date_tomorrow, tv_date_dayaftertomorrow;
     private Bitmap bitmap1, bitmap2, bitmap3;
     private ImageView iv_1, iv_2, iv_3;
     List<String> aa = new ArrayList<>();
@@ -77,6 +77,9 @@ public class ShowActivity extends AppCompatActivity {
                     aa.add(j1d.getJSONObject("cond").getString("code_d"));//999999999第一天代码（“101”）
                     aa.add(j2d.getJSONObject("cond").getString("code_d"));//101010101010第二天代码
                     aa.add(j3d.getJSONObject("cond").getString("code_d"));//1111111111第三天代码
+                    aa.add(j1d.getString("date"));//121212121212第一天日期
+                    aa.add(j2d.getString("date"));//131313131313第二天日期
+                    aa.add(j3d.getString("date"));//141414141414第三天日期
                     URL urlnew = new URL(Config.getInstance().getCodeToUrl(aa.get(8)));
                     HttpURLConnection urlConnection = (HttpURLConnection) urlnew.openConnection();
                     urlConnection.setDoInput(true);
@@ -104,25 +107,26 @@ public class ShowActivity extends AppCompatActivity {
             }
         }).start();
         updateUI.run();
+        testSharePreferences();
 
     }
 
     private void testSharePreferences() {
         SharedPreferences sharedPreferences = getSharedPreferences("test", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        String[] aa = new String[10];
-        String[] aak = new String[10];
-        for (int i = 0; i < 10; i++) {
-            aa[i] = "aakey  " + Integer.toString(i);
-            aak[i] = "aaValue   " + Integer.toString(i);
-            editor.putString(aa[i], aak[i]);
+//        String[] aa = new String[10];
+//        String[] aak = new String[10];
+//        for (int i = 0; i < 10; i++) {
+//            aa[i] = "aakey  " + Integer.toString(i);
+//            aak[i] = "aaValue   " + Integer.toString(i);
+//            editor.putString(aa[i], aak[i]);
+//        }
+        editor.putString("0", cityName);
+        for (int i = 0; i < aa.size(); i++) {
+            editor.putString(Integer.toString(i + 1), aa.get(i));
         }
-        editor.putString("name", "GlnK");
-        editor.putInt("age", 23);
         editor.commit();
-        String name = sharedPreferences.getString("name", null);
-        int age = sharedPreferences.getInt("age", 0);
-        Log.e("TAG", "name:  " + name + " age:  " + age);
+
     }
 
 
@@ -154,6 +158,9 @@ public class ShowActivity extends AppCompatActivity {
                 iv_1.setImageBitmap(bitmap1);
                 iv_2.setImageBitmap(bitmap2);
                 iv_3.setImageBitmap(bitmap3);
+                tv_date_today.setText(aa.get(11));
+                tv_date_tomorrow.setText(aa.get(12));
+                tv_date_dayaftertomorrow.setText(aa.get(13));
             }
         });
     }
@@ -178,6 +185,9 @@ public class ShowActivity extends AppCompatActivity {
         iv_1 = (ImageView) findViewById(R.id.iv_1day_icon);
         iv_2 = (ImageView) findViewById(R.id.iv_2day_icon);
         iv_3 = (ImageView) findViewById(R.id.iv_3day_icon);
+        tv_date_today = (TextView) findViewById(R.id.date_today);
+        tv_date_tomorrow = (TextView) findViewById(R.id.date_tomorrow);
+        tv_date_dayaftertomorrow = (TextView) findViewById(R.id.date_dayaftertomorrow);
     }
 
 }

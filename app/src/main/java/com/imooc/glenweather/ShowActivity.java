@@ -1,12 +1,15 @@
 package com.imooc.glenweather;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,6 +30,7 @@ import java.util.List;
 public class ShowActivity extends AppCompatActivity {
     String cityName;
     String URL3Day;
+    private Button btn_newCity;
     private TextView tv_cityName, tv_tip, tv_presentTemp, tv_h1, tv_h2, tv_h3, tv_l1, tv_l2, tv_l3, tv_date_today, tv_date_tomorrow, tv_date_dayaftertomorrow;
     private Bitmap bitmap1, bitmap2, bitmap3;
     private ImageView iv_1, iv_2, iv_3;
@@ -108,7 +112,17 @@ public class ShowActivity extends AppCompatActivity {
         }).start();
         updateUI.run();
         testSharePreferences();
+        setBtnNewCityListener();
+    }
 
+    private void setBtnNewCityListener() {
+        btn_newCity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ShowActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void testSharePreferences() {
@@ -190,6 +204,7 @@ public class ShowActivity extends AppCompatActivity {
         tv_date_today = (TextView) findViewById(R.id.date_today);
         tv_date_tomorrow = (TextView) findViewById(R.id.date_tomorrow);
         tv_date_dayaftertomorrow = (TextView) findViewById(R.id.date_dayaftertomorrow);
+        btn_newCity = (Button) findViewById(R.id.btn_newCity);
     }
 
 }
